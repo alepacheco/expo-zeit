@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import axios from "axios";
 
 export const App = () => {
@@ -17,7 +17,13 @@ export const App = () => {
   return (
     <View style={styles.container}>
       <Text>Zeit now & expo (React Native) Template!</Text>
-      <Text>{message}</Text>
+      <Text>Published to Expo and Next</Text>
+
+      <Text style={{ backgroundColor: 'aliceblue', padding: 14, margin: 24, borderRadius: 6}}>{message}</Text>
+      <Image
+          style={{width: 50, height: 50}}
+          source={{uri: 'https://facebook.github.io/react-native/img/tiny_logo.png'}}
+        />
     </View>
   );
 };

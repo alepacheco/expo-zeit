@@ -8,7 +8,8 @@
     "build-web": "expo-cli build:web",
     "eject": "expo eject",
     "ci-setup": "npm install -g expo-cli sharp-cli",
-    "build": "npm run build-web"
+    "build": "npm run build-web",
+    "publish": "expo publish"
   },
   "dependencies": {
     "axios": "^0.19.0",
