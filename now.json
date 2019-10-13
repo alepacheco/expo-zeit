@@ -6,10 +6,6 @@
     ],
     "builds": [
       {
-        "src": "package.json",
-        "use": "@now/static-build"
-      },
-      {
         "src": "web-build/",
         "use": "@now/static"
       }
