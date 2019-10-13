@@ -1,28 +1,19 @@
-# expo-zeit
-
+# expo-zeit example
 
 ## Usage
 
-You need to add a zeit token to the repo secrets to deploy correctly when the CI runs.
-You also need to add your Expo credentials to the secrets
+To deploy the web version and api code on zeit now you need to add zeit_now to the env secrets for the repo.
+If you also want to push it automatically to Expo you also need those credentials added
+
 > If changes don't load remember to empty local chaches
 
 
-## To run locally (with api)
-
-This has the api and client code running simultaneously but does not support hot reloading on the client code.
-
-- `expo build:web`
+## To run locally
+To run the api code we use Zeit now
 - `now dev`
 
-Loads on port 3000
+This starts the server in :3000 
+The react code will point there from the value in the .env file.
 
-## To run locally (w/o api)
-
-- `expo start --web`
-
-
-
-## TODO
-
-- [ ] Make api run independently and cross-platform
+### To run the UI code we use
+- `expo start`

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import axios from "axios";
+import { API_URL } from 'react-native-dotenv'
+
 
 export const App = () => {
   const [message, setMessage] = useState("Loading");
 
   axios
-    .get("/api/")
+    .get(API_URL + "/")
     .then(({ data }) => {
       setMessage(data);
     })
