@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "build-web": "expo-cli build:web",
     "eject": "expo eject",
-    "ci-setup": "npm install -g expo-cli"
+    "ci-setup": "npm install -g expo-cli sharp-cli"
   },
   "dependencies": {
     "expo": "^35.0.0",
