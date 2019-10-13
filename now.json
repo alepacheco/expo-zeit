@@ -1,7 +1,8 @@
 {
   "name": "expo-zeit",
   "version": 2,
-  "routes": [{
+  "routes": [
+    {
       "src": "/api/(.*)",
       "dest": "/api/$1"
     },
@@ -10,7 +11,8 @@
       "dest": "/web-build/$1"
     }
   ],
-  "builds": [{
+  "builds": [
+    {
       "src": "web-build/**/*",
       "use": "@now/static"
     },
