@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import axios from 'axios';
 
-export default function App() {
+
+
+export const App = () => {
+  const [message, setMessage] = useState('Loading');
+
+  axios.get('/api/').then((response: any) => {
+    setMessage(response);
+  })
+
+
   return (
     <View style={styles.container}>
       <Text>Zeit now & expo (React Native) Template!</Text>
+      <Text>{message}</Text>
     </View>
   );
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
