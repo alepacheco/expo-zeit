@@ -1,0 +1,28 @@
+{
+    "name": "expoZeit",
+    "version": 2,
+    "routes": [
+        { "src": "/(.*)", "dest": "/web-build/$1" }
+    ],
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@now/static-build"
+      },
+      {
+        "src": "web-build/",
+        "use": "@now/static"
+      }
+    ],
+    "build": {
+      "env": {
+        "IS_NOW": "true",
+        "ENV": "PROD"
+      }
+    },
+    "env": {
+      "IS_NOW": "true",
+      "ENV": "PROD"
+    }
+  }
+  
