@@ -3,17 +3,17 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import axios from 'axios';
 import { API_URL } from 'react-native-dotenv';
 
-export const App = () => {
+const App = () => {
   const [message, setMessage] = useState('Loading');
 
-  axios
-    .get(API_URL + '/')
-    .then(({ data }) => {
+  (async () => {
+    try {
+      const { data } = await axios.get(API_URL + '/');
       setMessage(data);
-    })
-    .catch(err => {
+    } catch (error) {
       setMessage('Api not workign.');
-    });
+    }
+  })();
 
   return (
     <View style={styles.container}>
