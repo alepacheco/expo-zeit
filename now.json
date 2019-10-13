@@ -1,12 +1,12 @@
 {
-    "name": "expoZeit",
+    "name": "expo-zeit",
     "version": 2,
     "routes": [
         { "src": "/(.*)", "dest": "/web-build/$1" }
     ],
     "builds": [
       {
-        "src": "web-build/",
+        "src": "web-build/*/**",
         "use": "@now/static"
       }
     ],
