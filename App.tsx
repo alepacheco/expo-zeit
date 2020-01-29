@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Platform } from 'react-native';
 import axios from 'axios';
-import { API_URL } from 'react-native-dotenv';
+import { API_URL, NATIVE_API_URL } from 'react-native-dotenv';
 
 const App = () => {
   const [message, setMessage] = useState('Loading');
-
+  const apiUrl = Platform.OS === 'web' ? API_URL : NATIVE_API_URL
   (async () => {
     try {
-      const { data } = await axios.get(API_URL + '/');
+      const { data } = await axios.get(apiUrl + '/');
       setMessage(data);
     } catch (error) {
       setMessage('Api not workign.');
