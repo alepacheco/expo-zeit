@@ -5,7 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "dev": "WEB_HOST=$HOST WEB_PORT=$PORT expo start --web-only --non-interactive",
+    "now-dev": "WEB_HOST=$HOST WEB_PORT=$PORT expo start --web-only --non-interactive",
     "build-web": "expo build:web",
     "eject": "expo eject",
     "ci-setup": "npm install -g expo-cli sharp-cli",
