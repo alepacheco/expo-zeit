@@ -12,10 +12,3 @@ If you also want to push it automatically to Expo you also need those credential
 To run the api code we use Zeit now
 
 - `now dev`
-
-This starts the server in :3000
-The react code will point there from the value in the .env file.
-
-### To run the UI code we use
-
-- `expo start`

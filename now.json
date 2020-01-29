@@ -1,5 +1,5 @@
 {
-  "name": "expo-zeit",
+  "name": "expo-zeit-test",
   "version": 2,
   "routes": [
     {
@@ -7,14 +7,19 @@
       "dest": "/api/$1"
     },
     {
+      "src": "/sockjs-node/(.*)",
+      "dest": "ws://localhost:3000/sockjs-node/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/web-build/$1"
+      "dest": "/$1"
     }
   ],
   "builds": [
     {
-      "src": "web-build/**/*",
-      "use": "@now/static"
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "web-build" }
     },
     {
       "src": "/api/**",
