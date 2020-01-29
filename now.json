@@ -15,7 +15,7 @@
     {
       "src": "package.json",
       "use": "@now/static-build",
-      "config: { "distDir": "web-build" }
+      "config": { "distDir": "web-build" }
     },
     {
       "src": "/api/**",
